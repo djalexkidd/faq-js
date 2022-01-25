@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.woman-mobile {
+    display: none;
+}
+
+body {
+    background: linear-gradient(#e66465, #9198e5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 65%;
+    background-color: #fff;
+    border-radius: 2rem;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-position-x: -590px;
+    background-position-y: -250px;
+    background-repeat: no-repeat;
+    box-shadow: 0px 15px 20px rgba(0,0,0,.2);
+}
+
+.images {
+    width: 50%;
+    overflow: hidden;
+}
+
+.woman-desktop {
+    margin-left: -100px;
+}
+
+.box-desktop {
+    position: absolute;
+    transform: translateX(-33vw) translateY(15%);
+}
+
+/* FAQ */
+
+.faq {
+    height: 100%;
+    width: 40%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15%;
+    /* text-align: center; */
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question:hover {
+    cursor: pointer;
+}
+
+.question p:hover {
+    color: rgba(255,0,0,1);
+}
+
+.answer {
+    font-size: 16px;
+    margin-top: 4%;
+}
+
+.separator {
+    background-color: #fff;
+    height: 1px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+@media all and (max-width: 650px) {
+    * {
+        font-size: 16px;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        background-image: url("./images/bg-pattern-mobile.svg");
+        background-position: 50% 10%;
+        background-size: 70%;
+        position: absolute;
+        top: 20%;
+    }
+
+    /* IMAGES */
+
+    .box-desktop,
+    .woman-desktop {
+        display: none;
+    }
+
+    .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 35%;
+        position: absolute;
+    }
+
+    .woman-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* MAIN */
+    .faq{
+        height: 50%;
+        width: 90%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 9%;
+        margin-top: 40%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
