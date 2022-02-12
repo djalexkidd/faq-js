@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 
-*, ::before, ::after {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +12,7 @@
 }
 
 body {
-    background: linear-gradient(#e66465, #9198e5);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -31,28 +31,30 @@ main {
     border-radius: 2rem;
     background-image: url("images/bg-pattern-desktop.svg");
     background-position-x: -590px;
-    background-position-y: -250px;
+    background-position-y: -280px;
     background-repeat: no-repeat;
     box-shadow: 0px 15px 20px rgba(0,0,0,.2);
 }
 
-.images {
+/* IMAGES */
+
+.images{
     width: 50%;
     overflow: hidden;
 }
 
-.woman-desktop {
+.woman-desktop{
     margin-left: -100px;
 }
 
-.box-desktop {
+.box-desktop{
     position: absolute;
     transform: translateX(-33vw) translateY(15%);
 }
 
 /* FAQ */
 
-.faq {
+.faq{
     height: 100%;
     width: 40%;
     margin-left: 10%;
@@ -63,7 +65,7 @@ main {
     justify-content: center;
 }
 
-h1 {
+h1{
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 15%;
@@ -75,18 +77,18 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
-.question:hover {
+.question:hover{
     cursor: pointer;
 }
-
-.question p:hover {
-    color: rgba(255,0,0,1);
+.question p:hover{
+    color: rgba(0,212,255,1)
 }
 
 .answer {
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 4%;
 }
 
@@ -97,16 +99,14 @@ h1 {
     margin-bottom: 1%;
 }
 
-@media all and (max-width: 650px) {
-    * {
+@media all and (max-width: 650px){
+    *{
         font-size: 16px;
     }
-
-    body {
+    body{
         width: 100vw;
         height: 100vh;
     }
-
     main {
         display: flex;
         justify-content: center;
@@ -122,22 +122,23 @@ h1 {
     }
 
     /* IMAGES */
-
-    .box-desktop,
-    .woman-desktop {
+    .box-desktop, 
+    .woman-desktop{
         display: none;
     }
 
-    .images {
+    .images{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 80%;
         height: 35%;
         position: absolute;
+        top: -15%;
+        overflow: visible;
     }
 
-    .woman-mobile {
+    .woman-mobile{
         display: flex;
         justify-content: center;
         align-items: center;
